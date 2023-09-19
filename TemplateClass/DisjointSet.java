@@ -8,7 +8,7 @@ class DisjointSet{
         this.parent = new int[len];
         //this.rank = new int[size];
         this.size = new int[len];
-        for(int i=1;i<len;i++){
+        for(int i=0;i<len;i++){
             parent[i] = i;
             size[i] = 1;
         }
