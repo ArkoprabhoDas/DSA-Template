@@ -11,7 +11,7 @@ class Trie {
             if(!node.containsKey(ch)) node.put(ch,new Node());
             node = node.get(ch);
         }
-        node.changeEnd(true);
+        node.setEnd();
     }
     
     public boolean search(String word) {
@@ -50,8 +50,8 @@ class Node {
     public void put(char ch,Node node){
         links[ch-'a'] = node;
     }
-    public void changeEnd(boolean bool){
-        flag = bool;
+    public void setEnd(){
+        flag = true;
     }
     public boolean isEnd(){
         return flag;
